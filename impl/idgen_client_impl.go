@@ -21,7 +21,7 @@ func (client *IDGenClientImpl) NextID(tableName string) (*idgenmodel.IDGenResp,
 	errorlib.AppError) {
 	restClient := restclientlib.NewRestClient()
 	hostPort := client.HostPort()
-	url := hostPort + "/" + nextIDUrl
+	url := hostPort + nextIDUrl
 	log.Println("url =", url)
 	req := idgenmodel.IDGenReq{
 		TableName: &tableName,
