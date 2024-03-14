@@ -14,7 +14,7 @@ type IDGenClientImpl struct {
 }
 
 func (client *IDGenClientImpl) HostPort() string {
-	return fmt.Sprintf("https://%s:%d", client.Host, client.Port)
+	return fmt.Sprintf("%s:%d", client.Host, client.Port)
 }
 
 func (client *IDGenClientImpl) NextID(tableName string) (*idgenmodel.IDGenResp,
